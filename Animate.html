@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onscroll Animation</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'poppins', sans-serif;
+            display: flex;
+            font-weight: 300;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        h1{
+            margin: 10px;
+        }
+        .box{
+            background-color: white;
+            border: 2px solid #3b3b3b;
+            color: #000;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 400px;
+            margin: 10px;
+            height: 200px;
+            border: yellow;
+            border-radius: 10px;
+            box-shadow: rgba(0,0,0,0.2) 2px 60px 40px -7px;
+            transform: translateX(400%);
+            transition: transform 0.4s ease;
+
+        }
+        .box:nth-of-type(even){
+            transform: translateX(-400%);
+
+        }
+        .box.show{
+            transform: translateX(0);
+        }
+        .box h2{
+            font-size: 22px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animate on scrolno plugin </h1>
+
+    <div class="box"><h2>HTML</h2></div>
+    <div class="box"><h2>CSS</h2></div>
+    <div class="box"><h2>SEO OPTIMIZATION</h2></div>
+    <div class="box"><h2>JQUERY</h2></div>
+    <div class="box"><h2>JAVASCRIPT</h2></div>
+    <div class="box"><h2>WORDPRESS/h2></div>
+    <div class="box"><h2>DEVELOPMENT</h2></div>
+    <div class="box"><h2>MOBILE SUPPORTS</h2></div>
+    <div class="box"><h2>DESKTOP SUPPORTS</h2></div>
+
+    <script>
+        const boxes = document.querySelectorAll('.box')
+        window.addEventListener('scroll', checkBoxes)
+
+        checkBoxes()
+
+        function checkBoxes(){
+            const triggerBottom = window.innerHeight/ 5 * 4
+            boxes.forEach(box =>{
+                const boxTop = box.getBoundingClientRect().top
+                if(boxTop <triggerBottom){
+                    box.classList.add('show')
+                }else{
+                    box.classList.remove('show')
+                }
+                });
+            }
+    </script>
+
+</body>
+</html>
