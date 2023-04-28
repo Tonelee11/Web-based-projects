@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ex{
+           color: rgb(238, 163, 2);
+            font-size: 1.5em;
+            
+        }
+        #red{
+            background-color: rgb(236, 125, 125);
+            color: white;
+        }
+        #green{
+            background-color: green;
+            color: yellow;
+        
+        }
+        #blue{
+            background-color: rgb(82, 82, 204);
+            color: aliceblue;
+        }
+        #orange{
+            background-color: rgb(201, 150, 56);
+            color: red;
+        }
+        #black{
+            background-color: black;
+            color: white;
+        }
+        #navy{
+            background-color: rgb(159, 159, 206);
+        }
+        #olive{
+            background-color: olive;
+            color: brown;
+        }
+    </style>
+</head>
+<body bgcolor="">
+    <p id="ex"><span>Hello!</span> Dear<br><br>I am Anthony Charles specialized in web development and content writing in this digital age,
+         when fighting to double down my degree I put much effort in my career of INFORMATION TECHNOLOGY as my entire desire to become an expert on.<br><br>Thanks</p>
+          <button id="white">indigo</button>
+          <button id="red">Red</button>
+          <button id="green">Green</button>
+          <button id="blue">Blue</button>
+          <button id="orange">orange</button>
+          <button id="black">Black</button>
+          <button id="navy">navy</button>
+          <button id="olive">olive</button>
+        
+          
+   <script>
+        document.addEventListener('DOMContentLoaded',function (){
+            document.querySelector('#green').onclick = function(){
+            document.querySelector('#ex').style.color = 'green';
+            }
+            document.querySelector('#red').onclick = function(){
+            document.querySelector('#ex').style.color = 'red';
+            }
+            document.querySelector('#blue').onclick = function(){
+            document.querySelector('#ex').style.color = 'blue';
+            }
+            document.querySelector('#white').onclick = function(){
+            document.querySelector('#ex').style.color = 'indigo';
+            }
+            document.querySelector('#orange').onclick = function(){
+            document.querySelector('#ex').style.color = 'orange';
+            }
+            document.querySelector('#black').onclick = function(){
+            document.querySelector('#ex').style.color = 'black';
+            }
+            document.querySelector('#navy').onclick = function(){
+            document.querySelector('#ex').style.color = 'navy';
+            }
+            document.querySelector('#olive').onclick = function(){
+            document.querySelector('#ex').style.color = 'olive';
+            }
+
+        })
+    </script>
+   
+</body>
+</html>
